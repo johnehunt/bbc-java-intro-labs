@@ -1,6 +1,6 @@
 package com.jjh.bookshop.domain;
 
-public abstract class Product {
+public abstract class Product implements Sales {
 
 	private String title;
 	private double price;

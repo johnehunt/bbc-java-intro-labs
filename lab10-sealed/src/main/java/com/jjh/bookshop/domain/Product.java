@@ -1,6 +1,6 @@
 package com.jjh.bookshop.domain;
 
-public sealed abstract class Product permits Book {
+public sealed abstract class Product implements Sales permits Book {
 
 	private String title;
 	private double price;

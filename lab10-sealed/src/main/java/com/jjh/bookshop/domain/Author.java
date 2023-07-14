@@ -1,6 +1,6 @@
 package com.jjh.bookshop.domain;
 
-public final class Author extends Contact {
+public final class Author extends Contact implements PrettyPrinter {
 	
 	private String genre;
 
@@ -15,6 +15,10 @@ public final class Author extends Contact {
 	
 	public void setGenre(String genre) {
 		this.genre = genre;
+	}
+
+	public void prettyPrint() {
+		System.out.printf("Author [name=%s, address=%s]%n", getName(), getAddress());
 	}
 
 	@Override

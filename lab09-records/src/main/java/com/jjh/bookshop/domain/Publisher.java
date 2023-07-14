@@ -1,6 +1,6 @@
 package com.jjh.bookshop.domain;
 
-public class Publisher extends Contact {
+public class Publisher extends Contact implements PrettyPrinter {
 	
 	private String organisation;
 	
@@ -9,18 +9,12 @@ public class Publisher extends Contact {
 		this.organisation = organisation;
 	}
 
-	
-	public String getOrganisation() {
-		return organisation;
-	}
-
-	public void setOrganisation(String organisation) {
-		this.organisation = organisation;
-	}
-
-	@Override
 	public String toString() {
-		return String.format("Publisher %s, organisation=%s", organisation, super.toString());
+		return String.format("Publisher [name=%s, address=%s]", getName(), getAddress());
 	}
-	
+
+	public void prettyPrint() {
+		System.out.printf("Publisher [name=%s, address=%s]", getName(), getAddress());
+	}
+
 }

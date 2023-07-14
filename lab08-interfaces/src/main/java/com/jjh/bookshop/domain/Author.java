@@ -1,44 +1,28 @@
 package com.jjh.bookshop.domain;
 
-public class Author implements PrettyPrinter {
-	
-	private String name;
-	private Address address;
+public class Author extends Contact implements PrettyPrinter {
 
-	public Author(String name) {
-		this.name = name;
-	}
-	
-	public Author(String name, Address address) {
-		this.name = name;
-		this.address = address;
+	private String genre;
+
+	public Author(String name, Address address, String genre) {
+		super(name, address);
+		this.genre = genre;
 	}
 
-	public String getName() {
-		return name;
+	public String getGenre() {
+		return genre;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
+	public void prettyPrint() {
+		System.out.printf("Author [name=%s, address=%s]%n", getName(), getAddress());
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Author [name=%s, address=%s]", name, address);
-	}
-
-	// Implements the PrettyPrinter interface
-
-	public void prettyPrint() {
-		System.out.printf("Author [name=%s, address=%s]%n", name, address);
+		return String.format("Author genre=%s, %s", genre, super.toString());
 	}
 
 }
