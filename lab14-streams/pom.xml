@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jjh</groupId>
-    <artifactId>lab10-sealed</artifactId>
+    <artifactId>lab14-streams</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
