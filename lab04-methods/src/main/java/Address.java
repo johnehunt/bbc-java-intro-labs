@@ -9,7 +9,6 @@ public class Address {
 	private String postcode;
 	
 	public Address(int number, String street, String city, String county, String postcode) {
-		super();
 		this.number = number;
 		this.street = street;
 		this.city = city;
