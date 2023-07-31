@@ -15,18 +15,6 @@ public class Publisher {
 		this.address = address;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
 	@Override
 	public String toString() {
 		return new StringJoiner(", ", Publisher.class.getSimpleName() + "[", "]")

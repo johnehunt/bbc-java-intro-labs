@@ -5,7 +5,7 @@ public class GuessingGameApp {
     public static void main(String [] args) {
 
         // Set up maximum number of guesses
-        int MAX = 4;
+        final int MAX = 4;
 
         // Set up count for number of guesses
         int guessCount = 0;
