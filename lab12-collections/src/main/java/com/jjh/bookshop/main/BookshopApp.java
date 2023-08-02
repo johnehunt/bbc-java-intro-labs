@@ -15,7 +15,7 @@ public class BookshopApp {
 			System.out.println("Book: " + book);
 		}
 
-		if (bookshop.isEmpty()) {
+		if (!bookshop.isEmpty()) {
 			Book book1 = bookshop.get(0);
 			book1.setSaleDiscount(10.0);
 			System.out.println("Sale price of book: " + book1.calculateSalePrice());
