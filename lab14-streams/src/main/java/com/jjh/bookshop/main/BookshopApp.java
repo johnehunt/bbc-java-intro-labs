@@ -18,11 +18,6 @@ public class BookshopApp {
 			System.out.println("Book: " + book);
 		}
 
-		bookshop.getBooks()
-				// .stream()
-				// .forEach(b -> System.out.println(b));
-				.forEach(System.out::println);
-
 		if (bookshop.isEmpty()) {
 			Book book1 = bookshop.get(0);
 			book1.setSaleDiscount(10.0);
@@ -37,13 +32,30 @@ public class BookshopApp {
 			System.out.println("Sale price of book: " + salesProduct.calculateSalePrice());
 		}
 
-		System.out.println();
+		System.out.println("---------");
+
+		bookshop.getBooks()
+				// .stream()
+				// .forEach(b -> System.out.println(b));
+				.forEach(System.out::println);
 
 		List<Book> expensiveBooks = bookshop.getBooks()
 				.stream()
 				.filter(b -> b.getPrice() > 13.00)
 				.collect(Collectors.toList());
 		System.out.println(expensiveBooks);
+
+		int bookCount =
+				List<Book> expensiveBooks = bookshop.getBooks()
+				.stream()
+				.filter(b -> b.getPrice() > 13.00);
+		System.out.println("There are " + bookCount + " above 13.00");
+
+		bookshop.getBooks().stream()
+				.sorted(comparing(Book::getTitle))
+				.map(Book::getAuthor)
+				.forEach(System.out::println);
+
 	}
 
 }
