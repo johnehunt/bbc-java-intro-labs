@@ -20,6 +20,7 @@ public class Factorial {
         Scanner sc = new Scanner(System.in);
         System.out.print("Please input the number to calculate the factorial for: ");
         int number = sc.nextInt();
+
         if (number < 0) {
             System.out.println("Error number must be non negative");
         } else if ((number == 0) || (number == 1)) {
