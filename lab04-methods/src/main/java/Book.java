@@ -16,8 +16,8 @@ public class Book {
 		this.price = price;
 	}
 
-	public void setSaleDiscount(double salePercentage) {
-		this.salePercentage = salePercentage / 100.0;
+	public void setSaleDiscount(double saleValue) {
+		this.salePercentage = saleValue / 100.0;
 	}
 
 	public double calculateSalePrice() {

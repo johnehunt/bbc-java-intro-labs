@@ -6,10 +6,6 @@ public class Author {
 	private String name;
 	private Address address;
 
-	public Author(String name) {
-		this.name = name;
-	}
-	
 	public Author(String name, Address address) {
 		this.name = name;
 		this.address = address;

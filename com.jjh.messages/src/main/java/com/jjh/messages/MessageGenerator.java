@@ -12,6 +12,8 @@ public class MessageGenerator {
   private static final Logger logger = Logger.getLogger(MessageGenerator.class.getName());
 
   public String getMessage() {
+    logger.setLevel(Level.INFO);
+    logger.info("Info information");
     String message = "Welcome, today is";
     Date date = Calendar.getInstance().getTime();
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");

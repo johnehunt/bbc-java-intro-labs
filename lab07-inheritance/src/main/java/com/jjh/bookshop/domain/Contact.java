@@ -6,7 +6,6 @@ public class Contact {
 	private Address address;
 	
 	public Contact(String name, Address address) {
-		super();
 		this.name = name;
 		this.address = address;
 	}

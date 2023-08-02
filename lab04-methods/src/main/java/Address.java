@@ -8,7 +8,11 @@ public class Address {
 	private String county;
 	private String postcode;
 	
-	public Address(int number, String street, String city, String county, String postcode) {
+	public Address(int number,
+				   String street,
+				   String city,
+				   String county,
+				   String postcode) {
 		this.number = number;
 		this.street = street;
 		this.city = city;
@@ -56,13 +60,9 @@ public class Address {
 		this.postcode = postcode;
 	}
 
-	@Override
 	public String toString() {
 		return String.format("Address [number=%s, street=%s, city=%s, county=%s, postcode=%s]", number, street, city,
 				county, postcode);
 	}
 	
-	
-	
-
 }

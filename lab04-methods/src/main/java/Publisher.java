@@ -8,7 +8,6 @@ public class Publisher {
 	private Address address;
 	
 	public Publisher(String name, Address address) {
-		super();
 		this.name = name;
 		this.address = address;
 	}
