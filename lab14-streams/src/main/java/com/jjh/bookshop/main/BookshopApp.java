@@ -32,31 +32,29 @@ public class BookshopApp {
 			System.out.println("Sale price of book: " + salesProduct.calculateSalePrice());
 		}
 
-		System.out.println("---------");
-
-		bookshop.getBooks()
-				// .stream()
-				// .forEach(b -> System.out.println(b));
-				.forEach(System.out::println);
+		System.out.println("-------------");
 
 		List<Book> expensiveBooks = bookshop.getBooks()
 				.stream()
 				.filter(b -> b.getPrice() > 13.00)
 				.collect(Collectors.toList());
-		System.out.println(expensiveBooks);
+		System.out.println("Expensive Books: " + expensiveBooks);
+
+		System.out.println("-------------");
 
 		long bookCount =
 				bookshop.getBooks()
 						.stream()
 						.filter(b -> b.getPrice() > 13.00)
 						.count();
-		System.out.println("There are " + bookCount + " above 13.00");
+		System.out.println("There are " + bookCount + " books above 13.00");
+
+		System.out.println("-------------");
 
 		bookshop.getBooks().stream()
 				.sorted(comparing(Book::getTitle))
 				.map(Book::getAuthor)
 				.forEach(System.out::println);
-
 	}
 
 }
