@@ -45,10 +45,11 @@ public class BookshopApp {
 				.collect(Collectors.toList());
 		System.out.println(expensiveBooks);
 
-		int bookCount =
-				List<Book> expensiveBooks = bookshop.getBooks()
-				.stream()
-				.filter(b -> b.getPrice() > 13.00);
+		long bookCount =
+				bookshop.getBooks()
+						.stream()
+						.filter(b -> b.getPrice() > 13.00)
+						.count();
 		System.out.println("There are " + bookCount + " above 13.00");
 
 		bookshop.getBooks().stream()
